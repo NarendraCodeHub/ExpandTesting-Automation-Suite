@@ -1,0 +1,22 @@
+{
+  "name": "expandtesting-automation-suite",
+  "version": "1.0.0",
+  "description": "A Playwright-based automation suite for end-to-end testing of the Expand Testing Practice Site. This project covers test scenarios to validate web application functionality, ensuring reliable and efficient test execution.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NarendraCodeHub/ExpandTesting-Automation-Suite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NarendraCodeHub/ExpandTesting-Automation-Suite/issues"
+  },
+  "homepage": "https://github.com/NarendraCodeHub/ExpandTesting-Automation-Suite#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.50.1",
+    "@types/node": "^22.13.4"
+  }
+}
