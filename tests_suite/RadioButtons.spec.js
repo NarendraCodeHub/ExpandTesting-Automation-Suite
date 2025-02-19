@@ -1,6 +1,8 @@
 import { test, expect } from '@playwright/test';
+import { closeAdvertisement } from './Advertisement';
 
 test('Test Radio Buttons', async ({ page, baseURL }) => {
+    
     await page.goto(baseURL);
     await page.getByRole('link', { name: 'Radio Buttons' }).click();
 
