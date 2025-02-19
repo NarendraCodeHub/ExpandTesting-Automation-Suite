@@ -14,15 +14,8 @@ test('Test Web Inputs', async ({ page, baseURL }) => {
     await page.goto(baseURL);
     await page.getByText('Web inputs').click();
     
-    // Close advertisement if present
-    const adFrame = await page.frame({ name: 'aswift_9' });
-    if (adFrame) {
-        const closeAdButton = adFrame.getByRole('button', { name: 'Close ad' });
-        if (await closeAdButton.isVisible()) {
-            await closeAdButton.click();
-        }
-    }
-
+    await closeAdvertisement(page);
+    
     await page.locator('button#btn-clear-inputs').click();
 
     // Enter Values 
