@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import { closeAdvertisement } from './Advertisement';
 
 const num = '100';
 const text = 'hello';
