@@ -5,13 +5,7 @@ test('Test Radio Buttons', async ({ page, baseURL }) => {
     await page.getByRole('link', { name: 'Radio Buttons' }).click();
 
     // Close advertisement if present
-    const adFrame = await page.frame({ name: 'aswift_9' });
-    if (adFrame) {
-        const closeAdButton = adFrame.getByRole('button', { name: 'Close ad' });
-        if (await closeAdButton.isVisible()) {
-            await closeAdButton.click();
-        }
-    }
+    await closeAdvertisement(page);
 
     // Favorite Color Radio Buttons
     const blueRadio = page.locator('input#blue');
