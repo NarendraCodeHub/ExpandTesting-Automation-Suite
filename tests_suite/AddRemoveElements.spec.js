@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import { closeAdvertisement } from './Advertisement';
 
 
-test('Test and Validate Add/Remove Element', async({page, baseURL}) => {
+test('Test and Validate Add & Remove Element', async({page, baseURL}) => {
 
     await page.goto(baseURL);
     await page.getByRole('link', { name: 'Add/Remove Elements'}).click();
