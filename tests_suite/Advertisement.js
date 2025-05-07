@@ -7,11 +7,11 @@
 export async function closeAdvertisement(page) {
     try {
         // Close advertisement if present
-        const adFrame = await page.frame({ name: 'aswift_9' });
+        const adFrame = await page.frame({ name: 'aswift_8' });
         
-        const adFrames = await page.frameLocator('iframe[name="aswift_9"]').frameLocator('iframe[name="ad_iframe"]');
+        const adFrames = await page.frameLocator('iframe[name="aswift_8"]').frameLocator('iframe[name="ad_iframe"]');
 
-        if (adFrame) {
+        if (adFrame) {  
             const closeAdButton = adFrame.getByRole('button', { name: 'Close ad' });
             if (await closeAdButton.isVisible()) {
                 await closeAdButton.click();
@@ -29,8 +29,8 @@ export async function closeAdvertisement(page) {
 
 export async function tyies(page) {
     try {
-        await page.locator('iframe[name="aswift_9"]').contentFrame().getByRole('button', { name: 'Close ad' }).click();
-        await page.locator('iframe[name="aswift_9"]').contentFrame().locator('iframe[name="ad_iframe"]').contentFrame().getByRole('button', { name: 'Close ad' }).click();
+        await page.locator('iframe[name="aswift_8"]').contentFrame().getByRole('button', { name: 'Close ad' }).click();
+        await page.locator('iframe[name="aswift_8"]').contentFrame().locator('iframe[name="ad_iframe"]').contentFrame().getByRole('button', { name: 'Close ad' }).click();
     } catch (error) {
         console.log('Advertisement not found or already closed:', error);
     }
