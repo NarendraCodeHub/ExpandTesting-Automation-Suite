@@ -24,11 +24,10 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
-      - name: Run Playwright tests and generate report
+      - name: Run Playwright tests
         run: |
           npx playwright test
-          npx playwright show-report --output=playwright-report
-
+          
       - name: Upload Playwright Report Artifact
         uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
