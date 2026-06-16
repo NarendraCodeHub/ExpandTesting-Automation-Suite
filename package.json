@@ -16,7 +16,7 @@
   },
   "homepage": "https://github.com/NarendraCodeHub/ExpandTesting-Automation-Suite#readme",
   "devDependencies": {
-    "@playwright/test": "^1.50.1",
+    "@playwright/test": "^1.61.0",
     "@types/node": "^22.13.4"
   }
 }
