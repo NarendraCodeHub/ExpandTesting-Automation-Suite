@@ -37,7 +37,7 @@
 // }
 
 // Inside Advertisement.js
-export async function tyies(page) {
+export async function closeAdvertisement(page) {
     try {
         const outerFrame = page.locator('iframe[name="aswift_8"]').contentFrame();
 
